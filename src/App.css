@@ -1,0 +1,22 @@
+#root {
+  width: 100%;  /* Make root take the full width of the screen */
+  margin: 0 auto;  /* Center horizontally */
+  padding: 0;  /* Remove padding to ensure no space on top, left, right, or bottom */
+  box-sizing: border-box; /* Ensure padding is included in the width/height calculation */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  height: 100vh; /* Ensure the root takes full height of the viewport */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;  /* Reduce padding on smaller screens if needed */
+  }
+}
