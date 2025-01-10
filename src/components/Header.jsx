@@ -1,20 +1,50 @@
-import '../styles/Header.css'; // Import the styles
+// Navbar.js
+import PropTypes from "prop-types";
 
-const Header = () => {
-    return (
-        <header className="header">
-            <nav className="nav-container">
-                <div className="logo">My Portfolio</div>
-                <ul className="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    );
-}
+import "../App.css";
+
+const Header = (props) => {
+  return (
+    <header className="header">
+      <nav>
+        <div className="logo">
+          <a href="index.html">
+            {props.firstName}
+            <span>{props.lastName}</span>
+          </a>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label htmlFor="menu-toggle" className="menu-icon">
+          &#9776;
+        </label>
+        <ul className="menu">
+          <li>
+            <a href="#">About</a>
+          </li>
+
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+          <li>
+            <a href="#contact" className="navbar-btn">
+              Contact Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+Header.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+};
 
 export default Header;

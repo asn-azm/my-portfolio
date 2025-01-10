@@ -1,17 +1,11 @@
-import '../styles/Footer.css'
-
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
-        <div className="social-links">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
+      <p>
+        &copy; 2025. Made with ❤️ by{" "}
+        <a href="https://github.com/asn-azm">AsnAzm</a>.
+      </p>
     </footer>
   );
-}
-
+};
 export default Footer;
