@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.cdnfonts.com/css/technology?styles=26651");
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
 :root {
   --glow-color: hsl(12, 100%, 69%);
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -12,6 +14,7 @@
   text-decoration: none;
   list-style: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -26,24 +29,28 @@ body {
   height: 100vh;
   font-family: "Share Tech Mono", monospace;
 }
+
 @media (max-width: 1440px) {
   .glowing-txt {
     font-size: 20px;
   }
 }
+
 @media (max-width: 1024px) {
   .glowing-txt {
     font-size: 16px;
   }
 }
+
 @media (max-width: 768px) {
   .glowing-txt {
     font-size: 1rem;
     letter-spacing: 6px;
   }
 }
-@media (max-width: 576px) {
-}
+
+@media (max-width: 576px) {}
+
 .header {
   position: sticky;
   top: 0;
@@ -53,7 +60,7 @@ body {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px 0 solid rgba(255, 255, 255, 0.18);
-  z-index: 1;
+  z-index: 1000;
   font-family: "Share Tech Mono", monospace;
 }
 
@@ -110,7 +117,7 @@ nav {
   display: none;
 }
 
-#menu-toggle:checked ~ .menu {
+#menu-toggle:checked~.menu {
   transform: scale(1, 1);
 }
 
@@ -149,6 +156,22 @@ nav {
     cursor: pointer;
   }
 }
+
+.navbar-name {
+  padding: 10px;
+  /* background-color: #00FFFF; */
+  /* border-radius: 10px; */
+  transition: 0.2s all ease-in-out;
+  box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.6);
+}
+
+.navbar-name:hover {
+  transform: scale(1.1);
+  /* background-color: #829191; */
+  color: #00FFFF;
+  box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.8);
+}
+
 /* hero styles */
 .hero-text {
   display: flex;
@@ -158,27 +181,62 @@ nav {
 
   margin-top: 50px;
 }
+
 .hero-text p {
   font-family: "Share Tech Mono", monospace;
   text-align: center;
   font-size: 20px;
 }
+
 .hero-text h1 {
   font-size: 2rem;
   font-weight: 900;
   text-decoration: underline;
   margin-bottom: 10px;
 }
+
 .pfp {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
+
 .pfp img {
   max-width: 150px;
   border-radius: 50%;
 }
+
+.imageContainer {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.imageContainer img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 40px;
+  border: 5px solid #FFFFFF; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+img:hover {
+  border-color: #829191; 
+  transform: scale(1.2) rotate(360deg); 
+}
+
+
+
+
+
+
+
+
 /* hero styles end */
 
 .button-effect {
@@ -203,30 +261,37 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 .footer p {
   font-family: "Share Tech Mono", monospace;
 }
+
 .footer a {
   color: #fff;
   font-family: "Share Tech Mono", monospace;
 }
+
 .heading h1 {
   font-size: 50px;
   text-align: center;
 }
+
 .heading h1 span {
   color: #00FFFF;
 }
+
 @media (max-width: 768px) {
   .heading h1 {
     font-size: 30px;
     text-align: center;
     margin-left: 0px;
   }
+
   .hero-text p {
     font-size: 15px;
   }
 }
+
 /* .hr {
   border: 0;
   height: 4px;
@@ -251,9 +316,11 @@ footer {
   transition: 0.2s all ease-in-out;
   cursor: pointer;
 }
+
 .project-card:hover {
   transform: scale(1.05);
 }
+
 .project-card img {
   width: 100%;
   height: 200px;
@@ -261,6 +328,7 @@ footer {
   border-radius: 15px;
   margin-bottom: 20px;
 }
+
 .project-map {
   display: flex;
   margin-top: 30px;
@@ -268,13 +336,16 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 .project-title h2,
 .project-description p {
   text-align: center;
 }
+
 .project-title h2 {
   font-size: 30px;
 }
+
 .project-tag p {
   padding: 8px;
   background: rgba(234, 3, 3, 0.3);
@@ -290,13 +361,16 @@ footer {
   flex-wrap: wrap;
   gap: 40px;
 }
+
 .skill img {
   max-width: 70px;
   transition: 0.2s all ease-in-out;
 }
+
 .skill img:hover {
   transform: scale(1.3);
 }
+
 .skill {
   padding: 10px;
   cursor: pointer;
@@ -312,20 +386,24 @@ footer {
   width: 180px;
   height: 110px;
 }
+
 @media (max-width: 768px) {
   .skill-map {
     margin: 10px;
     margin-top: 50px;
     gap: 15px;
   }
+
   .skill {
     width: 100px;
     height: 80px;
   }
+
   .skill img {
     max-width: 50px;
   }
 }
+
 .hero-socials {
   display: flex;
   justify-content: center;
@@ -333,13 +411,16 @@ footer {
   gap: 5px;
   margin: 30px;
 }
+
 .hero-socials img {
   max-width: 30px;
   transition: 0.2s all ease-in-out;
 }
+
 .hero-socials img:hover {
   transform: scale(1.3);
 }
+
 .hero-socials a {
   padding: 10px;
   background: rgba(5, 0, 0, 0.3);
@@ -349,12 +430,14 @@ footer {
   border: 1px 0 solid rgba(255, 255, 255, 0.18);
   border-radius: 15px;
 }
+
 #contact {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -374,8 +457,8 @@ form {
   padding: 40px;
 }
 
-form > input,
-form > textarea {
+form>input,
+form>textarea {
   padding: 12px;
   margin: 12px 0;
   border: none;
@@ -386,25 +469,26 @@ form > textarea {
   width: 100%;
 }
 
-form > textarea {
+form>textarea {
   height: 100px;
   resize: none;
 }
 
-form > input[type="submit"] {
+form>input[type="submit"] {
   padding-left: 1%;
   padding-right: 1%;
   cursor: pointer;
   transition: 0.35s;
 }
 
-form > input[type="submit"]:hover {
+form>input[type="submit"]:hover {
   /* background-color: #c70a0a; */
   background-color: #00FFFF;
   color: #829191;
   font-size: 20px;
   box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.37);
 }
+
 .contact-section {
   margin-top: 20px;
   width: 100%;
@@ -414,6 +498,7 @@ form > input[type="submit"]:hover {
 
   gap: 30px;
 }
+
 .contact-info {
   flex: 3;
   margin-left: 50px;
@@ -427,21 +512,26 @@ form > input[type="submit"]:hover {
   border-radius: 20px;
   padding-bottom: 8%;
 }
+
 .contact-form {
   flex: 5;
 }
+
 .contact-info .hero-socials {
   gap: 20px;
 }
+
 .contact-links {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
   }
+
   .contact-info {
     margin-left: 0px;
     padding-bottom: 20px;
@@ -449,12 +539,14 @@ form > input[type="submit"]:hover {
     margin: 30px;
     flex: 1;
   }
+
   form {
     flex: 1;
     padding-left: 18px;
     width: 100%;
     padding-right: 18px;
   }
+
   .contact-form {
     margin: 0;
     padding: 0;
@@ -464,17 +556,21 @@ form > input[type="submit"]:hover {
     width: 100%;
     margin-left: 15px;
   }
-  form > input {
+
+  form>input {
     width: 100%;
     margin: 10px 0;
   }
+
   .contact-links {
     flex-direction: column;
   }
 }
+
 .github img {
   max-width: 50px;
 }
+
 .project-links {
   display: flex;
   align-items: center;
@@ -482,6 +578,7 @@ form > input[type="submit"]:hover {
 
   margin-top: 20px;
 }
+
 .project-links a {
   font-size: 20px;
   text-decoration: none;
@@ -489,6 +586,7 @@ form > input[type="submit"]:hover {
 
   color: white;
 }
+
 .navbar-btn {
   padding: 10px;
   background-color: #00FFFF;
@@ -496,11 +594,13 @@ form > input[type="submit"]:hover {
   transition: 0.2s all ease-in-out;
   box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.6);
 }
+
 .navbar-btn:hover {
   transform: scale(1.1);
   background-color: #829191;
   box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.8);
 }
+
 .wrapper {
   width: auto;
   margin-top: 30px;
@@ -533,13 +633,16 @@ form > input[type="submit"]:hover {
   0% {
     background-color: #fa3939;
   }
+
   50% {
     background-color: transparent;
   }
+
   100% {
     background-color: #fa3939;
   }
 }
+
 #blog {
   margin: 50px 50px 0 50px;
   display: flex;
@@ -547,6 +650,7 @@ form > input[type="submit"]:hover {
   align-items: center;
   justify-content: center;
 }
+
 .posts {
   display: flex;
   margin-top: 50px;
@@ -555,9 +659,11 @@ form > input[type="submit"]:hover {
   align-items: center;
   gap: 30px;
 }
+
 .post-desc {
   margin-top: 20px;
 }
+
 .post-card {
   margin-top: 0;
 }
@@ -577,11 +683,13 @@ form > input[type="submit"]:hover {
   margin-bottom: 20px;
   transition: 0.2s all ease-in-out;
 }
+
 .cyber-scourge:hover {
   transform: scale(1.1);
   background-color: #f10505;
   box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.8);
 }
+
 .hero-typewriter {
   display: flex;
   align-items: center;
@@ -591,14 +699,18 @@ form > input[type="submit"]:hover {
   gap: 10px;
   font-size: 40px;
 }
+
 .typewriter-wrapper span {
   color: #00FFFF;
 }
+
 .Typewriter__wrapper {
   color: #00FFFF;
   font-weight: 700;
 }
+
 @media (max-width: 768px) {
+
   .Typewriter__wrapper,
   .hero-typewriter {
     font-size: 25px;

@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
-import { motion } from "framer-motion";
-import Tagline from "./Tagline";
+// import { motion } from "framer-motion";  
+// import Tagline from "./Tagline";
 import socials from "../content/socials";
 import Typewriter from "typewriter-effect";
 
+
 const About = (props) => {
+
     return (
         <div className="container">
-            <motion.div
+            {/* <motion.div
                 initial={{ scale: 0 }}
                 animate={{ rotate: 360, scale: 1 }}
                 transition={{
@@ -24,11 +26,18 @@ const About = (props) => {
                 className="pfp"
             >
                 <img src={props.img} alt="" />
-            </motion.div>
+            </motion.div> */}
 
-            <Tagline firstWord="Who " secondWord="Am I?" />
+            <div className="imageContainer">
+                <img
+                    src={props.img}
+                    alt=""
+                />
+            </div>
+
+            {/* <Tagline firstWord="Learn More About Me" secondWord="" /> */}
             <div className="hero-typewriter">
-                <h3>I am</h3>
+                <h3>I tend to be 😊</h3>
                 <Typewriter
                     options={{
                         strings: [
