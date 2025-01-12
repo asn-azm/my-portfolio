@@ -8,7 +8,6 @@ import "../App.css";
 const Header = (props) => {
 
   return (
-
     <header className="header">
       <nav>
         <div className="logo">
@@ -18,13 +17,13 @@ const Header = (props) => {
               <span>{props.lastName}</span> */}
           </a>
         </div>
-        {/* <input type="checkbox" id="menu-toggle" />
+        <input type="checkbox" id="menu-toggle" />
           <label htmlFor="menu-toggle" className="menu-icon">
             &#9776;
-          </label> */}
+          </label>
         <ul className="menu">
           <li>
-            <a href="#">About</a>
+            <a href="index.html">About</a>
           </li>
 
           <li>
@@ -36,11 +35,11 @@ const Header = (props) => {
           <li>
             <a href="#blog">Blog</a>
           </li>
-          <li>
+          {/* <li>
             <a href="/AhsanAzamCV.pdf" target="_blank" rel="noopener noreferrer">
               View My CV
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#contact" className="navbar-btn">
               Contact Me
