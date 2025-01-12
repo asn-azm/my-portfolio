@@ -37,7 +37,7 @@ const Header = (props) => {
             <a href="#blog">Blog</a>
           </li>
           <li>
-            <a href="src/assets/AhsanAzamCV.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="public/AhsanAzamCV.pdf" target="_blank" rel="noopener noreferrer">
               View My CV
             </a>
           </li>
