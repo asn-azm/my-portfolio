@@ -4,7 +4,8 @@ import information from "./content/information";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Tagline from "./components/Tagline";
-// import ProjectCard from "./components/ProjectCard";
+
+// import ProjectPreview from "./components/ProjectPreview";
 // import AboutHeading from "./components/AboutHeading";
 // import projects from "./content/projects";
 import Skill from "./components/Skill";
@@ -14,6 +15,8 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 // import blogPosts from "./content/blogPosts";
 import Reachout from "./components/Reachout";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 // import BlogPost from "./components/BlogPost";
 
 function App() {
@@ -51,30 +54,15 @@ function App() {
         description={information.userData.description}
         title={information.userData.title}
       />
-      <div className="hr"></div>
-
-      {/* <section id="projects">
-        <AboutHeading firstWord="My" secondWord="Projects" />
-        <motion.div
-          className="project-map"
-          ref={ref}
-          initial="hidden"
-          animate={controls}
-          variants={containerVariants}
-        >
-          {projects.map((project, index) => (
-            <div key={index}>
-              <ProjectCard
-                name={project.name}
-                img={project.img}
-                description={project.description}
-                source={project.sourceCode}
-                preview={project.preview}
-              />
-            </div>
-          ))}
-        </motion.div>
-      </section> */}
+      {/* <div className="hr"></div> */}
+      <section id="experience">
+        <Tagline firstWord="Experience &" secondWord=" Education" />
+        <Experience />
+      </section>
+      <section id="projects">
+        <Tagline firstWord="Projects" secondWord="" />
+        <Projects />
+      </section>
       <section id="skills">
         <Tagline firstWord="Skills" secondWord="&Tools" />
         <motion.div
@@ -91,23 +79,7 @@ function App() {
           ))}
         </motion.div>
       </section>
-      {/* <section id="blog">
-        <Heading firstWord="My" secondWord="Blog" />
-        <div className="posts">
-          {blogPosts.map((post, index) => (
-            <BlogPost
-              key={index}
-              title={post.title}
-              image={post.image}
-              read={post.link}
-              date={post.pubDate}
-            />
-          ))}
-        </div>
-        <a className="cyber-scourge" href="https://blog.randiltharusha.me">
-          View More Posts
-        </a>
-      </section>  */}
+
       <section id="contact">
         <Tagline firstWord="Contact" secondWord="Me" />
         <Reachout />

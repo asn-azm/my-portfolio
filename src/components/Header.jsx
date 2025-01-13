@@ -18,28 +18,26 @@ const Header = (props) => {
           </a>
         </div>
         <input type="checkbox" id="menu-toggle" />
-          <label htmlFor="menu-toggle" className="menu-icon">
-            &#9776;
-          </label>
+        <label htmlFor="menu-toggle" className="menu-icon">
+          &#9776;
+        </label>
         <ul className="menu">
           <li>
             <a href="index.html">About</a>
           </li>
-
+            <a href="#experience">Experience</a>
           <li>
             <a href="#projects">Projects</a>
           </li>
           <li>
             <a href="#skills">Skills</a>
           </li>
+
           <li>
-            <a href="#blog">Blog</a>
-          </li>
-          {/* <li>
             <a href="/AhsanAzamCV.pdf" target="_blank" rel="noopener noreferrer">
               View My CV
             </a>
-          </li> */}
+          </li>
           <li>
             <a href="#contact" className="navbar-btn">
               Contact Me

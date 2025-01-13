@@ -2,6 +2,7 @@
 @import url("https://fonts.cdnfonts.com/css/technology?styles=26651");
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
+
 :root {
   --glow-color: hsl(12, 100%, 69%);
 }
@@ -219,15 +220,15 @@ nav {
   object-fit: cover;
   border-radius: 50%;
   margin-top: 40px;
-  border: 5px solid #FFFFFF; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  border: 5px solid #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   padding: 10px;
 }
 
-img:hover {
-  border-color: #829191; 
-  transform: scale(1.2) rotate(360deg); 
+.imageContainer img:hover {
+  border-color: #829191;
+  transform: scale(1.2) rotate(360deg);
 }
 
 
@@ -302,7 +303,7 @@ footer {
     rgba(255, 255, 255, 0)
   );
 } */
-.project-card {
+/* .project-card {
   width: 310px;
   height: 550px;
   margin: 20px 50px;
@@ -315,29 +316,29 @@ footer {
   border-radius: 15px;
   transition: 0.2s all ease-in-out;
   cursor: pointer;
-}
+} */
 
-.project-card:hover {
+/* .project-card:hover {
   transform: scale(1.05);
-}
+} */
 
-.project-card img {
+/* .project-card img {
   width: 100%;
   height: 200px;
 
   border-radius: 15px;
   margin-bottom: 20px;
-}
+} */
 
-.project-map {
+/* .project-map {
   display: flex;
   margin-top: 30px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.project-title h2,
+/* .project-title h2,
 .project-description p {
   text-align: center;
 }
@@ -351,7 +352,7 @@ footer {
   background: rgba(234, 3, 3, 0.3);
   width: fit-content;
   border-radius: 10px;
-}
+} */
 
 .skill-map {
   display: flex;
@@ -715,4 +716,126 @@ form>input[type="submit"]:hover {
   .hero-typewriter {
     font-size: 25px;
   }
+}
+
+/* Projects Section */
+
+.btn {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+  outline: none;
+}
+
+.btn-shadow {
+  box-shadow: 0px 2px 5px rgba(160, 170, 180, 0.6);
+
+}
+
+.btn-shadow:hover {
+  box-shadow: 0px 3px 8px rgba(160, 170, 180, 0.9);
+}
+
+.PrimaryBtn {
+  padding: 12px 20px;
+  border: none;
+  background: rgb(57, 134, 250);
+  color: #f6f6f6;
+}
+
+.SecondaryBtn {
+  padding: 10px 18px;
+  border: 2px solid rgb(57, 134, 250);
+  color: #010606;
+  margin-right: 1rem;
+}
+
+.PrimaryBtn:hover {
+  background: rgb(18, 111, 250);
+}
+
+.SecondaryBtn:hover {
+  background: #e7f1fa;
+  color: #000
+}
+
+.SectionTitle {
+  font-size: 28px;
+  color: #151418;
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+
+.ProjectWrapper {
+  margin: 50px;
+}
+
+.Container {
+  max-width: 1000px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 1000px) {
+  .Container {
+    padding: 0;
+  }
+}
+
+/* .experience-container {
+  margin: 50px;
+  position: relative;
+  height: 100vh;
+
+}
+
+.experience-section {
+
+  color: white;
+  background: red;
+  padding: 15px;
+  position: absolute;
+  left: 50%;
+  min-height: 300px;
+  min-width: 800px;
+  transform: translateX(-50%);
+
+} */
+
+.experience-container {
+  margin: 50px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack the items vertically */
+  gap: 20px; /* Add space between sections */
+}
+
+.experience-section {
+  color: white;
+  background: rgba(5, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px 0 solid rgba(255, 255, 255, 0.18);
+  padding: 15px;
+  width: auto; /* Adjust the width based on content */
+  max-width: 55%; /* Ensure it doesn't grow too wide */
+  min-width: 250px; /* Optional: Set a minimum width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the left */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto; /* Center the sections horizontally */
+  word-wrap: break-word; /* Ensure long words break properly */
+  height: auto; /* Allow the height to adjust based on content */
+}
+
+.experience-section .exp-desc{
+  color: black;
 }
