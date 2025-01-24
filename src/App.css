@@ -173,6 +173,24 @@ nav {
   box-shadow: 0 8px 32px 0 rgba(135, 47, 31, 0.8);
 }
 
+
+.navbar-name {
+  color: #00FFFF;
+  animation: colorChange 3s infinite;
+}
+
+
+@keyframes colorChange {
+  40% {
+    color: white; /* Start with the initial color */
+  }
+  80% {
+    color: #00FFFF;
+  }
+  100% {
+    color: black; /* Revert back to the original color after 1 second */
+  }
+}
 /* hero styles */
 .hero-text {
   display: flex;
